@@ -12,7 +12,9 @@ class AutoFocusTextInput extends React.Component {
   }
 
   render() {
-    return <input ref={this.textInput} />;
+    return (
+      <input onChange={this.props.handleInputChange} ref={this.textInput} />
+    );
   }
 }
 
