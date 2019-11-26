@@ -1,0 +1,14 @@
+input {
+  padding: 0.1rem;
+  margin: 1rem;
+  color: lightgreen;
+  border: 0.2rem solid transparent;
+  font: 1rem Cursive;
+  width: 5rem;
+  background: transparent;
+}
+
+input:focus {
+  border-color: lightgreen;
+  background: rgba(255, 250, 250, 0.4);
+}
