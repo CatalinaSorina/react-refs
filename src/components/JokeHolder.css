@@ -1,0 +1,7 @@
+.Jokes {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  width: 50%;
+  align-items: center;
+}

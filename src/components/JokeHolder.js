@@ -1,12 +1,13 @@
 import React from "react";
 import Joke from "./Joke";
+import "./JokeHolder.css";
 
-const JokeHolder = ({ jokeSubject, joke }) => {
+const JokeHolder = ({ jokeTitle, joke }) => {
   return (
-    <>
-      <label>{jokeSubject}</label>
+    <div className="Jokes">
+      <label>{jokeTitle}</label>
       <Joke joke={joke} />
-    </>
+    </div>
   );
 };
 
