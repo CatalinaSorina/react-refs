@@ -19,9 +19,9 @@ class App extends React.Component {
   }
 
   handleInput = e => {
-    if (e.key === "Enter") {
-      e.target.value = "";
-      this.setState({ fetching: true });
+    if (e.key === "Enter" || !e.key) {
+      e.key ? (e.target.value = "") : console.log("clicked");
+      this.setState({ fetching: true, errorMessage: "" });
 
       axios
         .get("https://icanhazdadjoke.com/slack")
