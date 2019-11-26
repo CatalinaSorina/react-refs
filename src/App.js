@@ -3,6 +3,7 @@ import AutoFocusTextInput from "./components/AutoFocusTextInput";
 import JokeHolder from "./components/JokeHolder";
 import ErrorMessage from "./components/ErrorMessage";
 import axios from "axios";
+import { PacmanLoader } from "react-spinners";
 import "./App.css";
 
 class App extends React.Component {
@@ -46,6 +47,8 @@ class App extends React.Component {
           {this.state.status === "Should you pass ?" && (
             <AutoFocusTextInput handleInput={this.handleInput} />
           )}
+
+          {this.state.fetching && <PacmanLoader color={"#09d3ac"} />}
 
           {this.state.status === "PASSED" && (
             <>
