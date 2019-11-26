@@ -1,0 +1,30 @@
+.ButtonHolder {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.light,
+.dark {
+  outline: none;
+  border: none;
+  margin: 1rem;
+  padding: 0.4rem;
+  font: 1rem Cursive;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.light:active,
+.dark:active {
+  background: pink;
+}
+
+.light {
+  background: white;
+  color: black;
+}
+
+.dark {
+  background: black;
+  color: white;
+}

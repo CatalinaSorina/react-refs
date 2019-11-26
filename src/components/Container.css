@@ -1,0 +1,23 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #09d3ac;
+}
+
+.Container-label {
+  color: #30574f;
+  margin: 2rem;
+}
+
+.Container-button {
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 0.2rem 0.1rem #30574f;
+  outline: none;
+  margin: 2rem;
+  padding: 0.4rem;
+  color: #30574f;
+  background: #09d3ac;
+}
