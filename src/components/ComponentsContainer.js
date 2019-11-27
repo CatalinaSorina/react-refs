@@ -16,6 +16,7 @@ class ComponentsContainer extends React.Component {
       fetching: false,
       errorMessage: ""
     };
+    this.jokeHolder = React.createRef();
   }
 
   handleInput = e => {
@@ -33,6 +34,18 @@ class ComponentsContainer extends React.Component {
             fetching: false,
             errorMessage: ""
           });
+
+          //=======GIVE NEW JOKE COLOR======\\
+          let jokeHolderComponent = this.jokeHolder.current;
+          if (jokeHolderComponent) {
+            let newColor = this.getRandomColor();
+            console.log(jokeHolderComponent.style.color);
+            jokeHolderComponent.style.color =
+              jokeHolderComponent.style.color === newColor
+                ? this.getRandomColor()
+                : newColor;
+          }
+          //==================================//
         })
         .catch(error =>
           this.setState({
@@ -42,6 +55,15 @@ class ComponentsContainer extends React.Component {
           })
         );
     }
+  };
+
+  getRandomColor = () => {
+    let letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
   };
 
   render() {
@@ -66,6 +88,7 @@ class ComponentsContainer extends React.Component {
             <JokeHolder
               jokeTitle={this.state.jokeTitle}
               joke={this.state.joke}
+              ref={this.jokeHolder}
             />
             <button className="Container-button" onClick={this.handleInput}>
               one more joke

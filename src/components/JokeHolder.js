@@ -1,14 +1,13 @@
 import React from "react";
-import Joke from "./Joke";
 import "./JokeHolder.css";
 
-const JokeHolder = ({ jokeTitle, joke }) => {
+const JokeHolder = React.forwardRef(({ jokeTitle, joke }, ref) => {
   return (
-    <div className="Jokes">
+    <div className="Jokes" ref={ref}>
       <label>{jokeTitle}</label>
-      <Joke joke={joke} />
+      <p>{joke}</p>
     </div>
   );
-};
+});
 
 export default JokeHolder;
